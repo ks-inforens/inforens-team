@@ -23,7 +23,7 @@ export function TeamMemberCard({
     <motion.div
       variants={fadeUp}
       transition={{ duration: 0.45, delay: (index % 4) * 0.05, ease: 'easeOut' }}
-      className="group relative rounded-2xl bg-[#fff5f0] p-3"
+      className="group relative rounded-2xl bg-stone-100 p-3 transition-transform duration-300 hover:-translate-y-1"
     >
       <Link href={`/team/${member.id}`} className="block focus:outline-none">
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-stone-200">
@@ -37,7 +37,7 @@ export function TeamMemberCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
         </div>
         <div className="px-2 pb-2 pt-4">
-          <h3 className="text-base font-semibold text-zinc-900">
+          <h3 className="text-base font-semibold text-zinc-900 group-hover:underline">
             {member.name}
           </h3>
           <p className="mt-0.5 text-sm font-medium text-orange-700">{member.role}</p>
